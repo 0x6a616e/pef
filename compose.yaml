@@ -3,6 +3,7 @@ services:
     image: "0x6a616e/pef-api:latest"
     volumes:
       - images:/app/images
+      - models:/app/models
     ports:
       - "5000:80"
     deploy:
@@ -18,3 +19,4 @@ services:
 
 volumes:
   images:
+  models:
