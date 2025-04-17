@@ -12,12 +12,10 @@ echo "Setting Build Context..."
 docker context use $BUILD_CONTEXT
 
 echo "Building..."
-docker build -t 0x6a616e/pef-api backend/ 
-docker build -t 0x6a616e/pef-frontend frontend/ 
+docker build -t 0x6a616e/pef-backend backend/ 
 
 echo "Pushing..."
-docker push 0x6a616e/pef-api:latest
-docker push 0x6a616e/pef-frontend:latest
+docker push 0x6a616e/pef-backend:latest
 
 echo "Deploying..."
 docker context use $DEPLOY_CONTEXT

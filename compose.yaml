@@ -1,10 +1,10 @@
 services:
-  api:
+  backend:
     environment:
       MODEL_PATH: "models/UNet.pth"
       IMAGES_FOLDER: "images"
       MONGO_URL: "mongodb://mongodb:27017"
-    image: "0x6a616e/pef-api:latest"
+    image: "0x6a616e/pef-backend:latest"
     volumes:
       - images:/app/images
       - models:/app/models
@@ -17,13 +17,6 @@ services:
     image: mongo
     volumes:
       - mongodb_data:/data/db
-    deploy:
-      update_config:
-        order: start-first
-  frontend:
-    image: "0x6a616e/pef-frontend:latest"
-    ports:
-      - "8080:80"
     deploy:
       update_config:
         order: start-first
