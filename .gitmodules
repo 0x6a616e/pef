@@ -1,3 +1,6 @@
 [submodule "backend"]
 	path = backend
 	url = git@github.com:0x6a616e/pef-backend.git
+[submodule "droneapp"]
+	path = droneapp
+	url = git@github.com:0x6a616e/pef-droneapp.git
